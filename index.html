@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ron'S Cake Online Landing Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee2b4b",
+                        "background-light": "#FFFBF2", /* Cream background */
+                        "background-dark": "#221013",
+                        "chocolate": "#4A3531", /* Chocolate brown text */
+                        "chocolate-light": "#7D5A50",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem", 
+                        "lg": "1rem", 
+                        "xl": "1.5rem", 
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(74, 53, 49, 0.08)',
+                        'card': '0 4px 20px -5px rgba(74, 53, 49, 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Hide scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFFBF2; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E5E0D8; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D1CCC4; 
+        }
+    </style>
+</head>
+<body class="bg-background-light text-chocolate font-display selection:bg-primary selection:text-white overflow-x-hidden">
+<!-- Top Navigation -->
+<nav class="sticky top-0 z-50 w-full bg-background-light/90 backdrop-blur-md border-b border-chocolate/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo & Brand -->
+<div class="flex items-center gap-3">
+<div class="10 flex items-center justify-center text-primary overflow-hidden">
+</div>
+<img src="images/logo.png" alt="Ron'S Cake Online Logo" class="h-20 w-auto"/       > 
+</div>
+<!-- Desktop Menu -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-chocolate font-medium hover:text-primary transition-colors text-sm" href="#photos">Photos</a>
+<a class="text-chocolate font-medium hover:text-primary transition-colors text-sm" href="#flavours">Flavours</a>
+<a class="text-chocolate font-medium hover:text-primary transition-colors text-sm" href="#order">Order</a>
+<a class="text-chocolate font-medium hover:text-primary transition-colors text-sm" href="#contact">Contact</a>
+</div>
+<!-- CTA -->
+<div class="hidden md:block">
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/20 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                        Order on WhatsApp
+                    </button>
+</div>
+<!-- Mobile Menu Button -->
+<div class="md:hidden">
+<button class="text-chocolate p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<div class="flex flex-col w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Hero Section -->
+<section class="py-12 lg:py-20 flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20" id="order">
+<!-- Left Content -->
+<div class="flex-1 flex flex-col items-start gap-6 text-left w-full lg:w-1/2">
+<div>
+<span class="text-primary font-bold tracking-wide uppercase text-xs mb-2 block">Premium Quality</span>
+<h1 class="text-chocolate text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight mb-4">
+                        Taste of the<br/>generation
+                    </h1>
+<p class="text-chocolate-light text-lg leading-relaxed max-w-md">
+                        Experience the finest premium cakes, freshly baked for your special moments. Crafted with love and the best ingredients.
+                    </p>
+</div>
+<div class="flex flex-wrap gap-4 mt-2">
+<button class="bg-primary hover:bg-primary/90 text-white h-14 px-8 rounded-full text-base font-bold shadow-lg shadow-primary/25 transition-all transform hover:-translate-y-1 flex items-center justify-center min-w-[160px]">
+                        Order Now
+                    </button>
+<button class="bg-white hover:bg-gray-50 text-chocolate border border-chocolate/10 h-14 px-8 rounded-full text-base font-bold shadow-soft transition-all transform hover:-translate-y-1 flex items-center justify-center min-w-[160px]" >
+                        <a href="#flavours">View Flavours</a>
+                    </button>
+</div>
+<!-- Feature Chips (Moved inside Hero for flow) -->
+<div class="flex flex-wrap gap-3 mt-8 pt-8 border-t border-chocolate/5 w-full">
+<div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-chocolate/5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">local_shipping</span>
+<span class="text-chocolate text-xs font-semibold">Home Delivery</span>
+</div>
+<div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-chocolate/5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">qr_code_scanner</span>
+<span class="text-chocolate text-xs font-semibold">Scan &amp; Pay</span>
+</div>
+<div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-chocolate/5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">payments</span>
+<span class="text-chocolate text-xs font-semibold">Cash on Delivery</span>
+</div>
+</div>
+</div>
+<!-- Right Image -->
+<div class="flex-1 w-full lg:w-1/2 relative group">
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
+<img alt="Delicious chocolate cake with frosting and berries" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLEzQRfOJ-RqAduDLDDoSrrRxe3s1cJNHBJlRaT_T1RD51CtL4gz72eeJ2hVWtXUq7-Pb2BkcG88MKEmlNja_tJmNrpZ-91n0cZMpRaHLUFAvE25e9vkDqPaq5WGh9MitP1BsYnp3-0V_OM5RFCruLTRj-bjzA4uO_aQaZEEO69r7vrPQDWhGmXhJ6tlyGIAMbp35GgPa15ElYpb7h9cJAvX930PVg9c3sQJh3BHW-8M42IUFn3knGnh3Lb5hO7d6ulLQWoSpYx7k"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -left-6 size-24 rounded-full bg-primary/10 -z-10 blur-xl"></div>
+<div class="absolute -top-6 -right-6 size-32 rounded-full bg-primary/5 -z-10 blur-2xl"></div>
+</div>
+</section>
+<!-- Best Orders Section -->
+<section class="py-16">
+<div class="flex items-center justify-between mb-10 px-2">
+<h2 class="text-chocolate text-3xl font-bold tracking-tight">Best Orders</h2>
+<a class="text-primary font-medium text-sm flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                    View All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-xl cursor-pointer shadow-card hover:shadow-soft transition-all">
+<img alt="Elegant multi-tier wedding cake with flowers" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Elegant multi-tier wedding cake with flowers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC35DmzTzgXEyS4PL_Bx4JYYoVz-B8a1ElOvDGZ19gd_198fBBMS7ByngqYiz6AuYaEsUapinUP5TZRM9Rj3D8C6UnzrfnWnvYYFSGn1PLbovf0XGzsNvwU8q9ASBA7PMZ7viLcwGzmZgz1vchxWv8VTnc-g4m6OeVU30t-tphEZ3vP1qG1HIYMMkKduGsz07gc93K7N_w9dUdxGvF_GOKpdm5CP7zCrjz-d3j9LQcUbF-RQLYLSVngwL6knrT9BpYVQDJQ3Qrbz1Y"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex flex-col justify-end p-6">
+<h3 class="text-white text-2xl font-bold mb-1">Wedding</h3>
+<p class="text-white/80 text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Make your special day unforgettable</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-xl cursor-pointer shadow-card hover:shadow-soft transition-all">
+<img alt="Colorful birthday cake with candles" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Colorful birthday cake with candles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCisKc_5jERzA3XIT0wa8M4PoDohrfnGW2nHpf3uxCaypyWFlV3AV6cotAf2diZ0VU5U_32SuDGzN_Fvar7VP4M3T9cLNU_wyOE-5gBuY-351gaA3jAHWMlL_YEHSshh0Bd5XvKXzDrKMkeNA7DRMp52iEDHzkxgbxu43RJynbrVkxyMHM-pXxqdTbQyoGpLNjWNgjvZV9oNy5yXYmfL33tE2vOjtijJZZPSYrDKY9mOUn6x0Po2I_YhctZoZV2-WikvqWBYdwn4Rc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex flex-col justify-end p-6">
+<h3 class="text-white text-2xl font-bold mb-1">Birthday</h3>
+<p class="text-white/80 text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Celebrations tailored for you</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative aspect-[3/4] overflow-hidden rounded-xl cursor-pointer shadow-card hover:shadow-soft transition-all">
+<img alt="Festive holiday cupcakes and treats" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Festive holiday cupcakes and treats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRuju2Ux-yjKxnGbieYwqB_3a1aCSJ55tbxh6S5KsVYanAdHfd5d--tdJwm9HPl34Sh25261YDuIaQiQq_kXFpW8o8gJbzRvmlcBPnyP8usC-LS3T68Aqg0NTXojrRSWrZOEbzfTU-FEK0ug2YVnQM0ZBETMVZKu5_0z8lU3pteIqqiiCa6LmwxeCp0gefK1WpZ-_MgMvqt3xCNfMpoWs6H69CEcTTunfzYsZyH-sXiKdZkvmuUbf2i-lyclr3mzWXI24wexnyQCE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex flex-col justify-end p-6">
+<h3 class="text-white text-2xl font-bold mb-1">Festive Occasions</h3>
+<p class="text-white/80 text-sm font-medium opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Joy in every bite</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Photo Gallery Section -->
+<section class="py-16" id="photos">
+  <h2 class="text-chocolate text-3xl font-bold tracking-tight mb-8 px-2">Gallery</h2>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="galleryGrid">
+
+    <!-- CARD TEMPLATE:
+         data-title + data-desc = hover overlay text
+         figcaption = below text (always visible)
+    -->
+
+    <!-- 1 -->
+    <figure class="gallery-card relative group rounded-lg overflow-hidden bg-white shadow-sm">
+      <div class="aspect-square">
+        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQQSb5Pjwyt1cDg_MAwP0GRKVl9ksb3FxbYPJ8KZ0DYy3H4mgOGsPOwnAKvwMNzxccwp56z7M4VaoWC9c3q1FhGaW4OYVk2YOvqvxjhV1N_1qtxmowuXRohyt7G_212UJBtHaOqKpYkGOkWi7NdHO-dpBNMBpZmwcanANtAbcI2z6PLy_DBxT6kC7c8CFboFNbcYnJQOxk2cMnijUvAuyfBWjO-b5Rjhr71UZhdU8BmBo9AkPSNyVl7heyrPPI27VD-spOGxN4nBw"
+          alt="Strawberry Cake Slice"
+          data-title="Strawberry Cake Slice"
+          data-desc="Fresh strawberries, soft sponge, and a creamy finish." />
+      </div>
+
+      <!-- Hover overlay -->
+      <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-3">
+          <div class="text-white font-semibold leading-tight" data-overlay-title></div>
+          <div class="text-white/90 text-xs mt-1" data-overlay-desc></div>
+        </div>
+      </div>
+
+      <!-- Below caption (always) -->
+      <figcaption class="px-2 py-2 bg-white">
+        <div class="text-chocolate font-semibold text-sm">Strawberry Cake Slice</div>
+        <div class="text-chocolate-light text-xs">Fresh strawberries, soft sponge, and a creamy finish.</div>
+      </figcaption>
+    </figure>
+
+    <!-- 2 -->
+    <figure class="gallery-card relative group rounded-lg overflow-hidden bg-white shadow-sm">
+      <div class="aspect-square">
+        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBA2Ngku8Oql3f0H0rs-1r46RQDzR5edcAboaqtmmgdUNKZukEkTYU3h8ShiH2UkOLRsO6Ht66Rez9-3vcfGr_n5yylMkFHNcrNyrnHiZaI2a1426hFNdlVM9Xa6qool4zC4iY6e9U2hRGHKoqf2rGx7-IJcR54VyvxxhvZ4jyU1IlbimzEy5UfFBU5JNCnulLrmJiWta_t3PC7aX2LTmiu66Xs-7EMX5XT2cQf7n6SfihB2-j66LdOw4avoDSHK-y4VFJ96LRdYw"
+          alt="Fruit Cake"
+          data-title="Fruit Cake"
+          data-desc="Seasonal fruits layered over rich whipped cream." />
+      </div>
+      <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-3">
+          <div class="text-white font-semibold leading-tight" data-overlay-title></div>
+          <div class="text-white/90 text-xs mt-1" data-overlay-desc></div>
+        </div>
+      </div>
+      <figcaption class="px-2 py-2 bg-white">
+        <div class="text-chocolate font-semibold text-sm">Fruit Cake</div>
+        <div class="text-chocolate-light text-xs">Seasonal fruits layered over rich whipped cream.</div>
+      </figcaption>
+    </figure>
+
+    <!-- 3 -->
+    <figure class="gallery-card relative group rounded-lg overflow-hidden bg-white shadow-sm">
+      <div class="aspect-square">
+        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvnj4FOUEtZKsUaU3JLl3NyqZGpc22_cub6QzOFeALCngoF73IdbHAt7zHQumYlcXshwdFmOZnby2CqBJUwESCMTNNdYWjT5x7cYHrtz4HkOZTwTrWb-YgNf07wAymffAUzVx4J-njhWWhXjW2yG4sJzcUGfOWQzGMu_lTMQXwpbXBE9FJ3tMQczpOTC_dTD1JJWOqWOB5LLVdSUaznP5LlsbKy5E9qxly5tysS7gHQZLWQrxjzGEIQ2nyhXq6qLms0AOSL3HHo3s"
+          alt="Berry Cheesecake"
+          data-title="Berry Cheesecake"
+          data-desc="Silky cheesecake topped with berry compote." />
+      </div>
+      <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-3">
+          <div class="text-white font-semibold leading-tight" data-overlay-title></div>
+          <div class="text-white/90 text-xs mt-1" data-overlay-desc></div>
+        </div>
+      </div>
+      <figcaption class="px-2 py-2 bg-white">
+        <div class="text-chocolate font-semibold text-sm">Berry Cheesecake</div>
+        <div class="text-chocolate-light text-xs">Silky cheesecake topped with berry compote.</div>
+      </figcaption>
+    </figure>
+
+    <!-- 4 -->
+    <figure class="gallery-card relative group rounded-lg overflow-hidden bg-white shadow-sm">
+      <div class="aspect-square">
+        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUjZ3cySIYMvx3tridl-M4cXnw4TbdctqaotWRcZh3m7A_Zcn2LV7kIVlPMk-KRAqIS23RUjfGrDpQSyruKoZCxtBEu8TNdl1pEro46GN08cjQt1bOQxgzvTwNz92xWu8-XIcsigX-XXfpBMCJk6eSIgAsaAxmHIXfm6vaPfesMjtGVlQdtJay2kCLeWllFEdB_Jl1xUzC48qhFU3jvu76DZlJejV9Pz1fhHhlZC3tm1xuacIkACEYjzKkCrcVVm2lJZNka4WzYr4"
+          alt="Chocolate Layer Cake"
+          data-title="Chocolate Layer Cake"
+          data-desc="Deep cocoa layers with smooth ganache." />
+      </div>
+      <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-3">
+          <div class="text-white font-semibold leading-tight" data-overlay-title></div>
+          <div class="text-white/90 text-xs mt-1" data-overlay-desc></div>
+        </div>
+      </div>
+      <figcaption class="px-2 py-2 bg-white">
+        <div class="text-chocolate font-semibold text-sm">Chocolate Layer Cake</div>
+        <div class="text-chocolate-light text-xs">Deep cocoa layers with smooth ganache.</div>
+      </figcaption>
+    </figure>
+
+    <!-- 5 -->
+    <figure class="gallery-card relative group rounded-lg overflow-hidden bg-white shadow-sm">
+      <div class="aspect-square">
+        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWJnuffrmGehi02O86cqGYty9qNH11B-7NlPb_0OQJY1pIOsmpwCwUSY5pYmbAqwYSJHI12RsvuKWvhXnkSLCgahRIt12WOnfOX_KfIFXV8kEs8IjAYOq2paTCPZmR8OcUcXcnhLcI6jnzie7S8dP_roL5KCqScXHGcftkjL1uX5sL-7Dh9IZqfngUxO6IFBx20XFRKQmRpYN2BpK_zSpSDfXZznNMp9UtDBEoD80SzWZksbYO9bYZvvghpbaLhM-AT10I17B_9nE"
+          alt="Cream Pastry"
+          data-title="Cream Pastry"
+          data-desc="Light pastry with a soft vanilla cream center." />
+      </div>
+      <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-3">
+          <div class="text-white font-semibold leading-tight" data-overlay-title></div>
+          <div class="text-white/90 text-xs mt-1" data-overlay-desc></div>
+        </div>
+      </div>
+      <figcaption class="px-2 py-2 bg-white">
+        <div class="text-chocolate font-semibold text-sm">Cream Pastry</div>
+        <div class="text-chocolate-light text-xs">Light pastry with a soft vanilla cream center.</div>
+      </figcaption>
+    </figure>
+
+    <!-- 6 -->
+    <figure class="gallery-card relative group rounded-lg overflow-hidden bg-white shadow-sm">
+      <div class="aspect-square">
+        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp0b5-4jmXYX-a7_857Wit2d6fRtO3DDnPMQKyG8vbUVsZBFoUSPT9mymDWLBFRsqw5GzFfS0tqJy47vsRwjswGOYkaWMgeQJehzurclYdPTO6TqP9HsrSmtKhekJliUE32x-8QY-L-fQMisuRUxU0B_0cj01jbqMNoWAsP1u_yJeP1LmjvSJD0OtWq05cYKacR97cNELJeqKriGYLqhHf0YGd502d6gtUfsC0g_NeHArRjNHbzga8J-gymkhHOruCiIGoArGkUos"
+          alt="Blueberry Pancakes"
+          data-title="Blueberry Pancakes"
+          data-desc="Fluffy pancakes with syrup and blueberries." />
+      </div>
+      <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-3">
+          <div class="text-white font-semibold leading-tight" data-overlay-title></div>
+          <div class="text-white/90 text-xs mt-1" data-overlay-desc></div>
+        </div>
+      </div>
+      <figcaption class="px-2 py-2 bg-white">
+        <div class="text-chocolate font-semibold text-sm">Blueberry Pancakes</div>
+        <div class="text-chocolate-light text-xs">Fluffy pancakes with syrup and blueberries.</div>
+      </figcaption>
+    </figure>
+
+    <!-- 7 -->
+    <figure class="gallery-card relative group rounded-lg overflow-hidden bg-white shadow-sm">
+      <div class="aspect-square">
+        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVlHWYEu8vzt2wFfM5wq8gIgt2x0fqHX9ecMEIybZqwE-mO3tki612gIKXdWSTdzq2TEjsgmMJnRDpuFKtT4nJgoFg2dVIR5I6eq809JY-LWB9x76oSihuXvUUOmrpknjXAnA8yLc4vd_cetzvACo2qKgZ9Oe2BwbmJMPuJ5KdXjilzzMHbMZvyOpfA-mr5U9XMzlxcmE40K1r1H7Ig37wk-mWc5DmGIcLeMLHMC5XW7pqeEcE-6u_HZIOFNshWcPPl911bgfuZzU"
+          alt="Vanilla Sprinkle Cake"
+          data-title="Vanilla Sprinkle Cake"
+          data-desc="Classic vanilla with playful sprinkles on top." />
+      </div>
+      <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-3">
+          <div class="text-white font-semibold leading-tight" data-overlay-title></div>
+          <div class="text-white/90 text-xs mt-1" data-overlay-desc></div>
+        </div>
+      </div>
+      <figcaption class="px-2 py-2 bg-white">
+        <div class="text-chocolate font-semibold text-sm">Vanilla Sprinkle Cake</div>
+        <div class="text-chocolate-light text-xs">Classic vanilla with playful sprinkles on top.</div>
+      </figcaption>
+    </figure>
+
+    <!-- 8 -->
+    <figure class="gallery-card relative group rounded-lg overflow-hidden bg-white shadow-sm">
+      <div class="aspect-square">
+        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMgFRWkzLb6E3GsjEEFFMDtOmRf9WNxcEtyip6_M9DsmX5cRJwcmk-mD-ioDm921bXDcPupo07eTdOtMGiwh4KjxydS9go8TBaViRvBN_kAavj9cfivjYr_zJltiN7c3p3aNxSSerUk7gv_RhOlicONdpkQcUOMOhsVslF0qqY662xmVjhRdZhv_U10Z_aUdlr65JmRT3UQTtbqMoldngPyqhVdLUhkD85aVnseOXyIVyR-9ovDm_nyp_JnY-KU5jPZ27vLymeGPE"
+          alt="Assorted Donuts"
+          data-title="Assorted Donuts"
+          data-desc="A colorful box of donuts for every mood." />
+      </div>
+      <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-3">
+          <div class="text-white font-semibold leading-tight" data-overlay-title></div>
+          <div class="text-white/90 text-xs mt-1" data-overlay-desc></div>
+        </div>
+      </div>
+      
+    </figure>
+
+    <!-- NEXT 8 (hidden initially) - add your next 8 images here -->
+    <!-- Just copy the same <figure> block and add class "hidden more-photo" -->
+    <!-- Example placeholders (replace src/title/desc): -->
+    <figure class="gallery-card hidden more-photo relative group rounded-lg overflow-hidden bg-white shadow-sm">
+      <div class="aspect-square">
+        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          src="YOUR_NEXT_IMAGE_9.jpg"
+          alt="Image 9"
+          data-title="Image 9 Title"
+          data-desc="Image 9 short description." />
+      </div>
+      <div class="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-3">
+          <div class="text-white font-semibold leading-tight" data-overlay-title></div>
+          <div class="text-white/90 text-xs mt-1" data-overlay-desc></div>
+        </div>
+      </div>
+      <figcaption class="px-2 py-2 bg-white">
+        <div class="text-chocolate font-semibold text-sm">Image 9 Title</div>
+        <div class="text-chocolate-light text-xs">Image 9 short description.</div>
+      </figcaption>
+    </figure>
+
+    <!-- Repeat for images 10-16 -->
+  </div>
+
+  <!-- View More Button -->
+  <div class="mt-8 flex justify-center">
+    <button
+      id="viewMoreBtn"
+      class="px-6 py-3 rounded-full bg-chocolate text-white font-semibold shadow-sm hover:opacity-90 transition"
+      type="button"
+    >
+      View More
+    </button>
+  </div>
+</section>
+
+<!-- All Flavours Section -->
+<section class="py-16 bg-white rounded-3xl px-8 shadow-soft my-10 border border-chocolate/5" id="flavours">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
+<h2 class="text-chocolate text-3xl font-bold tracking-tight">All Flavours</h2>
+<div class="relative w-full md:w-80">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8">
+<!-- Column 1 -->
+<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
+<div class="size-2 rounded-full bg-primary/40"></div>
+<span class="text-chocolate font-medium">Vanilla Bean</span>
+</div>
+<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
+<div class="size-2 rounded-full bg-primary/40"></div>
+<span class="text-chocolate font-medium">Chocolate Fudge</span>
+</div>
+<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
+<div class="size-2 rounded-full bg-primary/40"></div>
+<span class="text-chocolate font-medium">Red Velvet</span>
+</div>
+<!-- Column 2 -->
+<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
+<div class="size-2 rounded-full bg-primary/40"></div>
+<span class="text-chocolate font-medium">Lemon Zest</span>
+</div>
+<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
+<div class="size-2 rounded-full bg-primary/40"></div>
+<span class="text-chocolate font-medium">Strawberry Cream</span>
+</div>
+<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
+<div class="size-2 rounded-full bg-primary/40"></div>
+<span class="text-chocolate font-medium">Coffee Mocha</span>
+</div>
+<!-- Column 3 -->
+<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
+<div class="size-2 rounded-full bg-primary/40"></div>
+<span class="text-chocolate font-medium">Butterscotch Crunch</span>
+</div>
+<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
+<div class="size-2 rounded-full bg-primary/40"></div>
+<span class="text-chocolate font-medium">Black Forest</span>
+</div>
+<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
+<div class="size-2 rounded-full bg-primary/40"></div>
+<span class="text-chocolate font-medium">Blueberry Bliss</span>
+</div>
+</div>
+</section>
+<!-- Payment Options -->
+<section class="py-12">
+  <h2 class="text-chocolate text-2xl font-bold tracking-tight mb-8 px-2">Payment Options</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <!-- Scan & Pay (click to dropdown) -->
+    <div
+      class="bg-white p-6 rounded-2xl shadow-sm border border-chocolate/5 hover:shadow-md transition-shadow"
+    >
+      <button
+        type="button"
+        class="w-full flex items-center gap-4 text-left"
+        aria-expanded="false"
+        aria-controls="scanPayDropdown"
+        id="scanPayBtn"
+      >
+        <div class="size-12 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined">qr_code_2</span>
+        </div>
+
+        <div class="flex-1">
+          <h3 class="text-chocolate font-bold text-lg">Scan &amp; Pay</h3>
+          <p class="text-chocolate-light text-sm">UPI, GPay, Paytm, PhonePe</p>
+        </div>
+
+        <!-- small chevron -->
+        <span class="material-symbols-outlined text-chocolate/60" id="scanPayChevron">expand_more</span>
+      </button>
+
+      <!-- Dropdown (2 QR images) -->
+      <div
+        id="scanPayDropdown"
+        class="mt-5 hidden overflow-hidden rounded-xl border border-chocolate/10 bg-chocolate/0 p-4"
+      >
+        <p class="text-chocolate-light text-sm mb-3">Choose any QR to scan:</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a
+            href="images/qr 1.png"
+            target="_blank"
+            class="block rounded-xl border border-chocolate/10 bg-white p-3 hover:shadow-sm transition"
+          >
+            <img
+              src="images/qr 1.png"
+              alt="UPI QR 1"
+              class="w-full rounded-lg object-contain"
+              loading="lazy"
+            />
+            <div class="mt-2 text-sm font-semibold text-chocolate">QR 1</div>
+            <div class="text-xs text-chocolate-light">Tap to open</div>
+          </a>
+
+          <a
+            href="images/qr 2.png"
+            target="_blank"
+            class="block rounded-xl border border-chocolate/10 bg-white p-3 hover:shadow-sm transition"
+          >
+            <img
+              src="images/qr 2.png"
+              alt="UPI QR 2"
+              class="w-full rounded-lg object-contain"
+              loading="lazy"
+            />
+            <div class="mt-2 text-sm font-semibold text-chocolate">QR 2</div>
+            <div class="text-xs text-chocolate-light">Tap to open</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cash on Delivery (unchanged) -->
+    <div class="bg-white p-6 rounded-2xl shadow-sm border border-chocolate/5 flex items-center gap-4 hover:shadow-md transition-shadow">
+      <div class="size-12 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+        <span class="material-symbols-outlined">payments</span>
+      </div>
+      <div>
+        <h3 class="text-chocolate font-bold text-lg">Cash on Delivery</h3>
+        <p class="text-chocolate-light text-sm">Pay when you receive</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Factory Outlet / Contact -->
+<section class="py-20 my-12 bg-chocolate text-white rounded-3xl text-center relative overflow-hidden" id="contact">
+<!-- Background Decoration -->
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 24px 24px;"></div>
+<div class="relative z-10 max-w-2xl mx-auto px-4">
+<h2 class="text-3xl font-bold mb-2">Visit Our Factory Outlet</h2>
+<p class="text-white/70 mb-8 text-lg">Freshly baked goodness available at Vasai / Virar / Nallasopara</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto bg-white text-chocolate px-6 py-3 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors">
+<span class="material-symbols-outlined">call</span>
+                        Call Us
+                    </button>
+<button class="w-full sm:w-auto bg-[#25D366] text-white px-6 py-3 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors">
+<span class="material-symbols-outlined">chat</span>
+                        WhatsApp
+                    </button>
+<button class="w-full sm:w-auto bg-transparent border border-white/30 text-white px-6 py-3 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined">map</span>
+                        Open Maps
+                    </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-lg shadow-green-900/20 transition-all hover:scale-110 flex items-center justify-center" href="#">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</a>
+<!-- Footer Simple -->
+<footer class="bg-background-light py-8 border-t border-chocolate/5">
+<div class="max-w-7xl mx-auto px-4 text-center">
+<p class="text-chocolate-light text-sm">© 2023 Ron'S Cake Online. All rights reserved.</p>
+</div>
+</footer>
+<script>
+  (function () {
+    const btn = document.getElementById("scanPayBtn");
+    const dropdown = document.getElementById("scanPayDropdown");
+    const chevron = document.getElementById("scanPayChevron");
+
+    btn.addEventListener("click", () => {
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!isOpen));
+
+      dropdown.classList.toggle("hidden", isOpen);
+
+      // rotate chevron
+      chevron.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+      chevron.style.transition = "transform 200ms ease";
+    });
+  })();
+
+
+  // Gallery View More Button
+  
+</script>
+<script>
+  (function () {
+    // 1) Put title/desc into overlay from data attributes
+    document.querySelectorAll(".gallery-card").forEach((card) => {
+      const img = card.querySelector("img");
+      const t = img?.dataset?.title || "";
+      const d = img?.dataset?.desc || "";
+
+      const ot = card.querySelector("[data-overlay-title]");
+      const od = card.querySelector("[data-overlay-desc]");
+      if (ot) ot.textContent = t;
+      if (od) od.textContent = d;
+    });
+
+    // 2) View more button (shows next 8 .more-photo)
+    const btn = document.getElementById("viewMoreBtn");
+    const hiddenItems = () => Array.from(document.querySelectorAll(".more-photo.hidden"));
+
+    btn?.addEventListener("click", () => {
+      const items = hiddenItems();
+      const batch = items.slice(0, 8); // next 8
+      batch.forEach((el) => el.classList.remove("hidden"));
+
+      // If no more images left, hide the button
+      if (hiddenItems().length === 0) {
+        btn.classList.add("hidden");
+      }
+    });
+  })();
+</script>
+</body>
+</html>
