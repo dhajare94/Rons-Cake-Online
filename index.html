@@ -405,53 +405,194 @@
 
 <!-- All Flavours Section -->
 <section class="py-16 bg-white rounded-3xl px-8 shadow-soft my-10 border border-chocolate/5" id="flavours">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
-<h2 class="text-chocolate text-3xl font-bold tracking-tight">All Flavours</h2>
-<div class="relative w-full md:w-80">
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-8">
-<!-- Column 1 -->
-<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
-<div class="size-2 rounded-full bg-primary/40"></div>
-<span class="text-chocolate font-medium">Vanilla Bean</span>
-</div>
-<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
-<div class="size-2 rounded-full bg-primary/40"></div>
-<span class="text-chocolate font-medium">Chocolate Fudge</span>
-</div>
-<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
-<div class="size-2 rounded-full bg-primary/40"></div>
-<span class="text-chocolate font-medium">Red Velvet</span>
-</div>
-<!-- Column 2 -->
-<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
-<div class="size-2 rounded-full bg-primary/40"></div>
-<span class="text-chocolate font-medium">Lemon Zest</span>
-</div>
-<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
-<div class="size-2 rounded-full bg-primary/40"></div>
-<span class="text-chocolate font-medium">Strawberry Cream</span>
-</div>
-<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
-<div class="size-2 rounded-full bg-primary/40"></div>
-<span class="text-chocolate font-medium">Coffee Mocha</span>
-</div>
-<!-- Column 3 -->
-<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
-<div class="size-2 rounded-full bg-primary/40"></div>
-<span class="text-chocolate font-medium">Butterscotch Crunch</span>
-</div>
-<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
-<div class="size-2 rounded-full bg-primary/40"></div>
-<span class="text-chocolate font-medium">Black Forest</span>
-</div>
-<div class="flex items-center gap-3 p-3 hover:bg-background-light rounded-lg transition-colors cursor-default">
-<div class="size-2 rounded-full bg-primary/40"></div>
-<span class="text-chocolate font-medium">Blueberry Bliss</span>
-</div>
-</div>
+  <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8">
+    <div>
+      <h2 class="text-chocolate text-3xl font-bold tracking-tight">All Flavours</h2>
+      <p class="text-chocolate/70 mt-1 text-sm">
+        Explore our full menu <span id="flavourCount" class="font-semibold text-chocolate">(0)</span>
+      </p>
+    </div>
+
+    <div class="relative w-full md:w-96">
+      <input
+        id="flavourSearch"
+        type="text"
+        placeholder="Search flavours… (e.g., Truffle, Oreo, Fruit)"
+        class="w-full rounded-2xl border border-chocolate/10 bg-white px-4 py-3 pr-11 text-chocolate placeholder:text-chocolate/40 shadow-sm outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/30 transition"
+      />
+      <span class="absolute right-4 top-1/2 -translate-y-1/2 text-chocolate/50 select-none">🔎</span>
+    </div>
+  </div>
+
+  <div id="flavourGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"></div>
+
+  <div id="noFlavour" class="hidden mt-8 text-center text-chocolate/60">
+    No matching flavours found. Try a different keyword.
+  </div>
 </section>
+
+<script>
+  const FLAVOURS = [
+    "Black Forest Cake",
+    "Pineapple Cake",
+    "Strawberry Cake",
+    "Butterscotch Cake",
+    "Almond Butterscotch Cake",
+    "White Forest Cake",
+    "Wight Forest Exotica Cake",
+    "Choco Chips Cake",
+    "Crunchy Choco Chips Cake",
+    "Zebra Forest Cake",
+    "Zebra Torte Cake",
+    "Double Chocolate Cake",
+    "Triple Chocolate Cake",
+    "Black and White Cake",
+    "Death By Cake",
+    "Gooey Brownie Cake",
+    "Rasmalai Cake",
+    "German Forest Cake",
+    "Delight Cake",
+    "Kitkat Cake",
+    "Oreo Cake",
+    "Dry Fruit Cake",
+    "Chocolate Truffle Cake",
+    "Mango Truffle Cake",
+    "Ferrero Rocher",
+    "Mix Fruit Cake",
+    "Blue Berry Cake",
+    "Red Velvet Cake",
+    "Rainbow Cake",
+    "Caramel Banana Cake",
+    "Coconut Orange Cake",
+    "Chocolate Orange Cake",
+    "Hazelnut Cake",
+    "Tiramisu (Coffee) Cake",
+    "Lotus Biscof Cake",
+    "Rose Lichi Cake",
+    "Pink Guava Cake",
+    "Combo Cake",
+    "Belgium Chocolate Cake",
+    "Walnut Chocolate Cake",
+    "Caramel Brownie Cake",
+    "Almond Naught Cake",
+    "Rabdi Malai Cake",
+    "Vanilla Cake",
+  ];
+
+  function getFlavourIcon(name) {
+    const n = name.toLowerCase();
+    if (n.includes("chocolate") || n.includes("brownie") || n.includes("truffle")) return "🍫";
+    if (n.includes("strawberry") || n.includes("lichi") || n.includes("guava")) return "🍓";
+    if (n.includes("mango")) return "🥭";
+    if (n.includes("pineapple")) return "🍍";
+    if (n.includes("banana")) return "🍌";
+    if (n.includes("orange") || n.includes("coconut")) return "🍊";
+    if (n.includes("coffee") || n.includes("tiramisu")) return "☕";
+    if (n.includes("rainbow")) return "🌈";
+    if (n.includes("oreo") || n.includes("kitkat") || n.includes("ferrero")) return "🍬";
+    if (n.includes("almond") || n.includes("walnut") || n.includes("hazelnut") || n.includes("dry fruit")) return "🥜";
+    if (n.includes("rasmalai") || n.includes("rabdi") || n.includes("malai")) return "🥛";
+    if (n.includes("red velvet")) return "❤️";
+    if (n.includes("vanilla")) return "🍦";
+    if (n.includes("zebra") || n.includes("black and white")) return "🦓";
+    if (n.includes("forest")) return "🌲";
+    return "🍰";
+  }
+
+  const DEFAULT_VISIBLE = 8;
+  let expanded = false;
+
+  function ensureToggleButton() {
+    const grid = document.getElementById("flavourGrid");
+    let btn = document.getElementById("flavourToggleBtn");
+
+    if (!btn) {
+      btn = document.createElement("button");
+      btn.id = "flavourToggleBtn";
+      btn.type = "button";
+      btn.className =
+        "mt-6 mx-auto flex items-center justify-center gap-2 px-5 py-3 rounded-2xl " +
+        "border border-chocolate/10 bg-white text-chocolate font-semibold shadow-sm " +
+        "hover:bg-background-light transition";
+
+      grid.insertAdjacentElement("afterend", btn);
+
+      btn.addEventListener("click", () => {
+        expanded = !expanded;
+        applyFilterAndRender(); // respects search + expands/collapses
+      });
+    }
+    return btn;
+  }
+
+  function renderFlavours(list) {
+    const grid = document.getElementById("flavourGrid");
+    const count = document.getElementById("flavourCount");
+    const empty = document.getElementById("noFlavour");
+
+    grid.innerHTML = "";
+    count.textContent = `(${list.length})`;
+    empty.classList.toggle("hidden", list.length !== 0);
+
+    // show only first 8 unless expanded
+    const visibleList = expanded ? list : list.slice(0, DEFAULT_VISIBLE);
+
+    visibleList.forEach((name) => {
+      const icon = getFlavourIcon(name);
+
+      const item = document.createElement("div");
+      item.className =
+        "group flex items-center gap-3 p-3 rounded-2xl border border-chocolate/5 bg-white " +
+        "hover:bg-background-light hover:border-chocolate/10 hover:shadow-sm transition cursor-default";
+
+      item.innerHTML = `
+        <div class="flex items-center justify-center size-10 rounded-2xl bg-primary/10 border border-primary/10
+                    group-hover:scale-[1.03] transition">
+          <span class="text-lg leading-none">${icon}</span>
+        </div>
+
+        <div class="min-w-0 flex-1">
+          <div class="text-chocolate font-semibold truncate">${name}</div>
+          <div class="text-chocolate/50 text-xs mt-0.5">Popular pick • Tap to browse</div>
+        </div>
+
+        <div class="opacity-0 group-hover:opacity-100 transition text-chocolate/40 select-none">✨</div>
+      `;
+      grid.appendChild(item);
+    });
+
+    // toggle button logic
+    const btn = ensureToggleButton();
+    const shouldShowBtn = list.length > DEFAULT_VISIBLE && list.length !== 0;
+    btn.classList.toggle("hidden", !shouldShowBtn);
+
+    if (shouldShowBtn) {
+      const remaining = Math.max(0, list.length - DEFAULT_VISIBLE);
+      btn.innerHTML = expanded
+        ? `Show less <span class="text-chocolate/50">▲</span>`
+        : `Show more <span class="text-chocolate/50">(${remaining}) ▼</span>`;
+    }
+  }
+
+  function applyFilterAndRender() {
+    const q = document.getElementById("flavourSearch").value.trim().toLowerCase();
+    const filtered = FLAVOURS.filter((f) => f.toLowerCase().includes(q));
+
+    // if search results are small, auto-expand not needed
+    if (filtered.length <= DEFAULT_VISIBLE) expanded = true;
+
+    renderFlavours(filtered);
+  }
+
+  // initial render
+  renderFlavours(FLAVOURS);
+
+  // live search
+  document.getElementById("flavourSearch").addEventListener("input", () => {
+    expanded = false; // reset to collapsed when typing
+    applyFilterAndRender();
+  });
+</script>
 <!-- Payment Options -->
 <section class="py-12">
   <h2 class="text-chocolate text-2xl font-bold tracking-tight mb-8 px-2">Payment Options</h2>
@@ -624,4 +765,5 @@
 </body>
 
 </html>
+
 
